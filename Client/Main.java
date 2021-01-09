@@ -22,39 +22,40 @@ public class Main {
 
         JPanel whitePanel = new JPanel();
         whitePanel.setBackground(Color.white);
-        whitePanel.setBounds(59, 325, 500, 62);
+        whitePanel.setBounds(59, 360, 500, 62);
         whitePanel.setOpaque(true);
         whitePanel.setVisible(true);
         
         JLabel label = new JLabel();
-        label.setLocation(27, 75);
-        label.setSize(500, 150);
+        label.setLocation(200, 100);
+        label.setSize(184, 184);
         label.setForeground(Color.white);
         label.setBackground(Color.BLACK);
-        label.setIconTextGap(100);
+        label.setIconTextGap(100); //Gap Text - Image
         label.setBorder(border);
         label.setIcon(image);
         label.setOpaque(true);
         label.setVisible(true);
 
         JLabel label2 = new JLabel();
-        label.setText("Taskkiller");
-        label.setLocation(0, 0);
-        label.setFont(new Font("Arial Black",Font.PLAIN,20));
-        label.setForeground(Color.white);
-        label.setBackground(Color.BLACK);
-        label.setOpaque(true);
-        label.setVisible(true);
+        label2.setText("Taskkiller");
+        label2.setSize(400, 50);
+        label2.setLocation(250, 7);
+        label2.setFont(new Font("Arial Black",Font.PLAIN,20));
+        label2.setForeground(Color.white);
+        label2.setBackground(Color.BLACK);
+        label2.setOpaque(true);
+        label2.setVisible(true);
 
         JButton processKillerInput = new JButton();
-        processKillerInput.setBounds(390, 341, 65, 30);
+        processKillerInput.setBounds(390, 376, 65, 30);
         processKillerInput.setSize(65,30);
         processKillerInput.setBackground(new Color(0xE1E1E1));
         processKillerInput.setVisible(true);
         processKillerInput.setText("Kill");
 
         JButton loopKillerInput = new JButton();
-        loopKillerInput.setBounds(476, 341, 65, 30);
+        loopKillerInput.setBounds(476, 376, 65, 30);
         loopKillerInput.setSize(65, 30);
         loopKillerInput.setVisible(true);
         loopKillerInput.setBackground(new Color(0xE1E1E1));
