@@ -3,6 +3,7 @@ package Client;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
 import javax.swing.border.Border;
 import java.awt.Color;
 import java.awt.Font;
@@ -16,9 +17,9 @@ public class Main {
     public static void main(String[] args) {
         Border border = BorderFactory.createLineBorder(Color.BLACK, 3);
 
-        var logo = new ImageIcon(".//Java//Client//res//logo.jpg", "-");
+        var logo = new ImageIcon("logo.jpg", "-");
 
-        ImageIcon image = new ImageIcon(".//Java//Client//res//logo.jpg", "-");
+        ImageIcon image = new ImageIcon("logo.jpg", "-");
 
         JPanel whitePanel = new JPanel();
         whitePanel.setBackground(Color.white);
@@ -62,6 +63,9 @@ public class Main {
         loopKillerInput.setText("Loop");
         loopKillerInput.setOpaque(true);
 
+        JTextField textField = new JTextField();
+        textField.setBounds(75, 376, 300, 30);
+
         JFrame frame = new JFrame();
         frame.setTitle("Taskkiller Win64x made by Zinio");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -72,6 +76,7 @@ public class Main {
         frame.add(processKillerInput);
         frame.add(loopKillerInput);
         frame.add(whitePanel);
+        frame.add(textField);
         frame.setSize(637, 526);
         frame.setVisible(true);
         
