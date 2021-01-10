@@ -1,4 +1,4 @@
-package Client;
+package src;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -17,9 +17,9 @@ public class Main {
     public static void main(String[] args) {
         Border border = BorderFactory.createLineBorder(Color.BLACK, 3);
 
-        var logo = new ImageIcon("logo.jpg", "-");
+        var logo = new ImageIcon(".//lib//logo.jpg", "-");
 
-        ImageIcon image = new ImageIcon("logo.jpg", "-");
+        ImageIcon image = new ImageIcon(".//lib//logo.jpg", "-");
 
         JPanel whitePanel = new JPanel();
         whitePanel.setBackground(Color.white);
@@ -54,6 +54,7 @@ public class Main {
         processKillerInput.setBackground(new Color(0xE1E1E1));
         processKillerInput.setVisible(true);
         processKillerInput.setText("Kill");
+        processKillerInput.setFocusable(false);
 
         JButton loopKillerInput = new JButton();
         loopKillerInput.setBounds(476, 376, 65, 30);
@@ -62,6 +63,7 @@ public class Main {
         loopKillerInput.setBackground(new Color(0xE1E1E1));
         loopKillerInput.setText("Loop");
         loopKillerInput.setOpaque(true);
+        loopKillerInput.setFocusable(false);
 
         JTextField textField = new JTextField();
         textField.setBounds(75, 376, 300, 30);
