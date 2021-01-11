@@ -2,9 +2,8 @@
 A simple Windows 10 program through which you can kill any process running on your pc in an instant\
 \
 NOTE: This is my first ever project and also my first time practically programming. I am very aware that a program to kill processes is not a very useful tool and can also cause problems. However, I still decided to do it, because I thought it would be a very nice project to start off with. \
-\
 # Dependencies
-Coming soon.\
+Coming soon.
 # Changelog
 0.7 [Alpha] - Added Kill-Confirmation in JOptionPane\
 \
