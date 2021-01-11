@@ -2,15 +2,19 @@ package src;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.Border;
+
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
-
 
 public class Main {
 
@@ -44,6 +48,12 @@ public class Main {
         label.setOpaque(true);
         label.setVisible(true);
 
+        JTextField textField = new JTextField();
+        textField.setBounds(75, 376, 300, 30);
+
+        JTextField textField2 = new JTextField();
+        textField2.setBounds(75, 306, 300, 30);
+
         JLabel label2 = new JLabel();
         label2.setText("Taskkiller");
         label2.setSize(400, 50);
@@ -54,6 +64,8 @@ public class Main {
         label2.setOpaque(true);
         label2.setVisible(true);
 
+        JOptionPane processConfirm = new JOptionPane();
+
         JButton processKillerInput = new JButton();
         processKillerInput.setBounds(390, 376, 65, 30);
         processKillerInput.setSize(65,30);
@@ -61,6 +73,13 @@ public class Main {
         processKillerInput.setVisible(true);
         processKillerInput.setText("Kill");
         processKillerInput.setFocusable(false);
+        processKillerInput.addActionListener((ActionListener) new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				JOptionPane.showMessageDialog(null, "Process killed.");
+			}
+        });
 
         JButton processKillerInput2 = new JButton();
         processKillerInput2.setBounds(390, 306, 65, 30);
@@ -68,7 +87,14 @@ public class Main {
         processKillerInput2.setBackground(new Color(0xE1E1E1));
         processKillerInput2.setVisible(true);
         processKillerInput2.setText("Kill");
-        processKillerInput.setFocusable(false);
+        processKillerInput2.setFocusable(false);
+        processKillerInput2.addActionListener((ActionListener) new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				JOptionPane.showMessageDialog(null, "Process killed.");
+			}
+        });
 
         JButton loopKillerInput = new JButton();
         loopKillerInput.setBounds(476, 376, 65, 30);
@@ -78,6 +104,13 @@ public class Main {
         loopKillerInput.setText("Loop");
         loopKillerInput.setOpaque(true);
         loopKillerInput.setFocusable(false);
+        loopKillerInput.addActionListener((ActionListener) new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				JOptionPane.showMessageDialog(null, "Loop killing started, end program to stop.");
+			}
+        });
 
         JButton loopKillerInput2 = new JButton();
         loopKillerInput2.setBounds(476, 306, 65, 30);
@@ -87,12 +120,13 @@ public class Main {
         loopKillerInput2.setText("Loop");
         loopKillerInput2.setOpaque(true);
         loopKillerInput2.setFocusable(false);
+        loopKillerInput2.addActionListener((ActionListener) new ActionListener() {
 
-        JTextField textField = new JTextField();
-        textField.setBounds(75, 376, 300, 30);
-
-        JTextField textField2 = new JTextField();
-        textField2.setBounds(75, 306, 300, 30);
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				JOptionPane.showMessageDialog(null, "Loop killing started, end program to stop.");
+			}
+        });
 
         JFrame frame = new JFrame();
         frame.setTitle("Taskkiller Win64x made by Zinio");
@@ -109,6 +143,7 @@ public class Main {
         frame.add(whitePanel2);
         frame.add(textField);
         frame.add(textField2);
+        frame.add(processConfirm);
         frame.setSize(637, 526);
         frame.setVisible(true);
         
