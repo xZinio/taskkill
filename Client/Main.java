@@ -22,9 +22,7 @@ import javax.swing.JButton;
 public class Main {
 
     public static class WindowsProcessKiller {
-        // command used to get list of running task
         private static final String TASKLIST = "tasklist";
-        // command used to kill a task
         private static final String KILL = "taskkill /IM ";
 
         public boolean isProcessRunning(String serviceName) {
@@ -34,7 +32,6 @@ public class Main {
                 BufferedReader reader = new BufferedReader(new InputStreamReader(pro.getInputStream()));
                 String line;
                 while ((line = reader.readLine()) != null) {
-                    // System.out.println(line);
                     if (line.startsWith(serviceName)) {
                         return true;
                     }
