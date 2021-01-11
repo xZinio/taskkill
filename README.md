@@ -4,7 +4,7 @@ A simple Windows 10 program through which you can kill any process running on yo
 NOTE: This is my first ever project and also my first time practically programming. I am very aware that a program to kill processes is not a very useful tool and can also cause problems. However, I still decided to do it, because I thought it would be a very nice project to start off with. \
 \
 # Changelog
-0.6 [Alpha] - Added Second Killbar
+0.6 [Alpha] - Added Second Killbar\
 \
 0.5 [Alpha] - Fixed all known Bugs & Issues with JLabel 1 & 2\
 \
