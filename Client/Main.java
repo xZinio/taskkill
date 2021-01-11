@@ -1,4 +1,4 @@
-package Client;
+package src;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -17,9 +17,9 @@ public class Main {
     public static void main(String[] args) {
         Border border = BorderFactory.createLineBorder(Color.BLACK, 3);
 
-        var logo = new ImageIcon("logo.jpg", "-");
+        var logo = new ImageIcon(".//lib//logo.jpg", "-");
 
-        ImageIcon image = new ImageIcon("logo.jpg", "-");
+        ImageIcon image = new ImageIcon(".//lib//logo.jpg", "-");
 
         JPanel whitePanel = new JPanel();
         whitePanel.setBackground(Color.white);
@@ -60,6 +60,7 @@ public class Main {
         processKillerInput.setBackground(new Color(0xE1E1E1));
         processKillerInput.setVisible(true);
         processKillerInput.setText("Kill");
+        processKillerInput.setFocusable(false);
 
         JButton processKillerInput2 = new JButton();
         processKillerInput2.setBounds(390, 306, 65, 30);
@@ -67,6 +68,7 @@ public class Main {
         processKillerInput2.setBackground(new Color(0xE1E1E1));
         processKillerInput2.setVisible(true);
         processKillerInput2.setText("Kill");
+        processKillerInput.setFocusable(false);
 
         JButton loopKillerInput = new JButton();
         loopKillerInput.setBounds(476, 376, 65, 30);
@@ -75,6 +77,7 @@ public class Main {
         loopKillerInput.setBackground(new Color(0xE1E1E1));
         loopKillerInput.setText("Loop");
         loopKillerInput.setOpaque(true);
+        loopKillerInput.setFocusable(false);
 
         JButton loopKillerInput2 = new JButton();
         loopKillerInput2.setBounds(476, 306, 65, 30);
@@ -83,6 +86,7 @@ public class Main {
         loopKillerInput2.setBackground(new Color(0xE1E1E1));
         loopKillerInput2.setText("Loop");
         loopKillerInput2.setOpaque(true);
+        loopKillerInput2.setFocusable(false);
 
         JTextField textField = new JTextField();
         textField.setBounds(75, 376, 300, 30);
