@@ -32,6 +32,7 @@ public class Main {
                 BufferedReader reader = new BufferedReader(new InputStreamReader(pro.getInputStream()));
                 String line;
                 while ((line = reader.readLine()) != null) {
+
                     if (line.startsWith(serviceName)) {
                         return true;
                     }
@@ -121,13 +122,13 @@ public class Main {
                     String processName = input;
                     boolean isRunning = pKiller.isProcessRunning(processName);
             
-                    JOptionPane.showMessageDialog(null, "is " + processName + " running : " + isRunning);
+                    JOptionPane.showMessageDialog(null, "Is the process " + processName + " running?: " + isRunning);
             
                     if (isRunning) {
                         WindowsProcessKiller.killProcess(processName);
                     }
                     else {
-                        JOptionPane.showMessageDialog(null, "Not able to find the process : "+processName);
+                        JOptionPane.showMessageDialog(null, "Cannot find the process: "+processName);
                     }
             }});
 
@@ -144,18 +145,18 @@ public class Main {
                 public void actionPerformed(ActionEvent e) {
                     String input2 = textField.getText();
                     System.out.println(input2);
-                    WindowsProcessKiller pKiller = new WindowsProcessKiller();
+                    WindowsProcessKiller pKiller2 = new WindowsProcessKiller();
 
                     String processName2 = input2;
-                    boolean isRunning = pKiller.isProcessRunning(processName2);
+                    boolean isRunning = pKiller2.isProcessRunning(processName2);
             
-                    JOptionPane.showMessageDialog(null, "is " + processName2 + " running : " + isRunning);
+                    JOptionPane.showMessageDialog(null, "Is the process " + processName2 + " running?: " + isRunning);
             
                     if (isRunning) {
                         WindowsProcessKiller.killProcess(processName2);
                     }
                     else {
-                        JOptionPane.showMessageDialog(null, "Not able to find the process : "+processName2);
+                        JOptionPane.showMessageDialog(null, "Cannot find the process: "+processName2);
                     }
             }});
 
