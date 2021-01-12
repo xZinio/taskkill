@@ -14,6 +14,7 @@ import java.awt.event.ActionListener;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.concurrent.TimeUnit;
 
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
@@ -121,16 +122,16 @@ public class Main {
 
                     String processName = input;
                     boolean isRunning = pKiller.isProcessRunning(processName);
-            
+
                     JOptionPane.showMessageDialog(null, "Is the process " + processName + " running?: " + isRunning);
-            
+
                     if (isRunning) {
                         WindowsProcessKiller.killProcess(processName);
+                    } else {
+                        JOptionPane.showMessageDialog(null, "Cannot find the process: " + processName);
                     }
-                    else {
-                        JOptionPane.showMessageDialog(null, "Cannot find the process: "+processName);
-                    }
-            }});
+                }
+            });
 
             JButton processKillerInput2 = new JButton();
             processKillerInput2.setBounds(390, 306, 65, 30);
@@ -149,16 +150,16 @@ public class Main {
 
                     String processName2 = input2;
                     boolean isRunning = pKiller2.isProcessRunning(processName2);
-            
+
                     JOptionPane.showMessageDialog(null, "Is the process " + processName2 + " running?: " + isRunning);
-            
+
                     if (isRunning) {
                         WindowsProcessKiller.killProcess(processName2);
+                    } else {
+                        JOptionPane.showMessageDialog(null, "Cannot find the process: " + processName2);
                     }
-                    else {
-                        JOptionPane.showMessageDialog(null, "Cannot find the process: "+processName2);
-                    }
-            }});
+                }
+            });
 
             JButton loopKillerInput = new JButton();
             loopKillerInput.setBounds(476, 376, 65, 30);
@@ -178,17 +179,27 @@ public class Main {
 
                     String processName = input;
                     boolean isRunning = pKiller.isProcessRunning(processName);
-            
+
                     JOptionPane.showMessageDialog(null, "Is the process " + processName + " running?: " + isRunning);
-                    
-                    while(isRunning)
+
+                    while (isRunning)
                         if (isRunning) {
                             WindowsProcessKiller.killProcess(processName);
+                            try {
+                                TimeUnit.SECONDS.sleep(5);
+                            } catch (InterruptedException e1) {
+                                e1.printStackTrace();
+                            }
+                        } else {
+                            JOptionPane.showMessageDialog(null, "Cannot find the process: " + processName);
+                            try {
+                                TimeUnit.SECONDS.sleep(5);
+                            } catch (InterruptedException e1) {
+                                e1.printStackTrace();
+                            }
                         }
-                        else {
-                            JOptionPane.showMessageDialog(null, "Cannot find the process: "+processName);
-                        }
-            }});
+                }
+            });
 
             JButton loopKillerInput2 = new JButton();
             loopKillerInput2.setBounds(476, 306, 65, 30);
@@ -208,14 +219,19 @@ public class Main {
 
                     String processName2 = input2;
                     boolean isRunning = pKiller2.isProcessRunning(processName2);
-            
+
                     JOptionPane.showMessageDialog(null, "Is the process " + processName2 + " running?: " + isRunning);
-            
+
                     while (isRunning)
                         if (isRunning) {
                             WindowsProcessKiller.killProcess(processName2);
+                            try {
+                                TimeUnit.SECONDS.sleep(5);
+                            } catch (InterruptedException e1) {
+                                e1.printStackTrace();
+                            }
                         }
-                        else {
+                        else {  
                             JOptionPane.showMessageDialog(null, "Cannot find the process: "+processName2);
                         }
             }});
