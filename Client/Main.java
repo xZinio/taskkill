@@ -182,6 +182,8 @@ public class Main {
 
                     JOptionPane.showMessageDialog(null, "Is the process " + processName + " running?: " + isRunning);
 
+                    JOptionPane.showMessageDialog(null, "To stop the Loop Kill, exit the program.");
+
                     while (isRunning)
                         if (isRunning) {
                             WindowsProcessKiller.killProcess(processName);
@@ -221,6 +223,8 @@ public class Main {
                     boolean isRunning = pKiller2.isProcessRunning(processName2);
 
                     JOptionPane.showMessageDialog(null, "Is the process " + processName2 + " running?: " + isRunning);
+
+                    JOptionPane.showMessageDialog(null, "To stop the Loop Kill, exit the program.");
 
                     while (isRunning)
                         if (isRunning) {
