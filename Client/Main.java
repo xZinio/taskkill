@@ -11,16 +11,19 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.image.BufferedImage;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
+import javax.imageio.ImageIO;
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 
-public class Main {
+public class taskkiller {
 
     public static class WindowsProcessKiller {
         private static final String TASKLIST = "tasklist";
@@ -57,12 +60,12 @@ public class Main {
 
         }
 
-        public static void main(String[] args) {
+        public static void main(String[] args) throws IOException {
             Border border = BorderFactory.createLineBorder(Color.BLACK, 3);
 
-            var logo = new ImageIcon(".//lib//logo.jpg", "-");
-
-            ImageIcon image = new ImageIcon(".//lib//logo.jpg", "-");
+            URL url = new URL("https://ckuban.org/public/logo.jpg");
+            BufferedImage c = ImageIO.read(url);
+            ImageIcon image = new ImageIcon(c);
 
             JPanel whitePanel = new JPanel();
             whitePanel.setBackground(Color.white);
@@ -261,6 +264,6 @@ public class Main {
             frame.setVisible(true);
 
             frame.getContentPane().setBackground(Color.BLACK);
-            frame.setIconImage(logo.getImage());
+            frame.setIconImage(image.getImage());
         }
     }}
