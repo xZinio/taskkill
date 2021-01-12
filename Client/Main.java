@@ -80,7 +80,7 @@ public class Main {
             label.setSize(184, 184);
             label.setForeground(Color.white);
             label.setBackground(Color.BLACK);
-            label.setIconTextGap(100); // Gap Text - Image
+            label.setIconTextGap(100);
             label.setBorder(border);
             label.setIcon(image);
             label.setOpaque(true);
@@ -172,9 +172,23 @@ public class Main {
 
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    JOptionPane.showMessageDialog(null, "Loop killing started, end program to stop.");
-                }
-            });
+                    String input = textField.getText();
+                    System.out.println(input);
+                    WindowsProcessKiller pKiller = new WindowsProcessKiller();
+
+                    String processName = input;
+                    boolean isRunning = pKiller.isProcessRunning(processName);
+            
+                    JOptionPane.showMessageDialog(null, "Is the process " + processName + " running?: " + isRunning);
+                    
+                    while(isRunning)
+                        if (isRunning) {
+                            WindowsProcessKiller.killProcess(processName);
+                        }
+                        else {
+                            JOptionPane.showMessageDialog(null, "Cannot find the process: "+processName);
+                        }
+            }});
 
             JButton loopKillerInput2 = new JButton();
             loopKillerInput2.setBounds(476, 306, 65, 30);
@@ -188,9 +202,23 @@ public class Main {
 
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    JOptionPane.showMessageDialog(null, "Loop killing started, end program to stop.");
-                }
-            });
+                    String input2 = textField2.getText();
+                    System.out.println(input2);
+                    WindowsProcessKiller pKiller2 = new WindowsProcessKiller();
+
+                    String processName2 = input2;
+                    boolean isRunning = pKiller2.isProcessRunning(processName2);
+            
+                    JOptionPane.showMessageDialog(null, "Is the process " + processName2 + " running?: " + isRunning);
+            
+                    while (isRunning)
+                        if (isRunning) {
+                            WindowsProcessKiller.killProcess(processName2);
+                        }
+                        else {
+                            JOptionPane.showMessageDialog(null, "Cannot find the process: "+processName2);
+                        }
+            }});
 
             JFrame frame = new JFrame();
             frame.setTitle("Taskkiller Win64x made by Zinio");
