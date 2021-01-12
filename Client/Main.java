@@ -143,7 +143,7 @@ public class Main {
 
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    String input2 = textField.getText();
+                    String input2 = textField2.getText();
                     System.out.println(input2);
                     WindowsProcessKiller pKiller2 = new WindowsProcessKiller();
 
@@ -209,6 +209,7 @@ public class Main {
             frame.add(textField2);
             frame.add(processConfirm);
             frame.setSize(637, 526);
+            frame.setLocation(600, 250);
             frame.setVisible(true);
 
             frame.getContentPane().setBackground(Color.BLACK);
