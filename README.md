@@ -7,7 +7,7 @@ Also, I know that putting a 230 line code into a single file might not be a 'goo
 Anyway, I hope everything works find and if not feel free to create an issue.
 # Dependencies
 Java (TM) 8 Update 271 or higher must be installed on your system.\
-Not only that, but your Java Runtime needs to support class files of versions up to 59.0 .
+Not only that, but your Java Runtime needs to support class files of versions up to 59.0. For that, simply download the Java (SE) Development Kit (JDK).\
 Older versions might work, but weren't tested.
 # Changelog
 1.0 [Beta] - Compiled everything into a single .jar file\
